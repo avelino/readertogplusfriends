@@ -8,6 +8,10 @@ handlers:
   static_files: favicon.png
   upload: favicon\.png
 
+- url: /images/(.*\.(gif|png|jpg))
+  static_files: template/images/\1
+  upload: template/images/(.*\.(gif|png|jpg))
+
 - url: /robots.txt
   static_files: robots.txt
   upload: robots.txt
