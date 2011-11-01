@@ -16,6 +16,11 @@
 </script>
 
 <h1>Google Reader to Google+ Friends</h1>
+<!-- Inclua esta tag na seção head ou logo antes da tag de fechamento da seção body -->
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<!-- Inclua esta tag onde desejar que o botão +1 seja exibido -->
+<g:plusone size="tall"></g:plusone>
+<a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="avelino0">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
 
 <form action="/send" method="post" enctype="multipart/form-Data">
   Arquivo json: <input type="file" name="arquivo" id="arquivo">
@@ -29,8 +34,19 @@
 <p>Abra o arquivo JSON no bloco de notas, copie e cole o conteúdo na caixa ao lado esquerdo do parser online. À direita deve ser exibido algo um pouco mais inteligível, você reconhecerá nomes, links e afins. Pode mesmo reconhecer a string de números em “<em>profileIds</em>” que identifica cada endereço de perfil do Google+ (basta adicionar esta string ao endereço <em>https://plus.google.com</em> para acessar o perfil correspondente).</p><p>Mas isso é complicado, e ficamos no aguardo de alguém criar uma ferramenta que permita importar todos os amigos em círculos no G+. Ou se alguém conhecer um leitor/parser JSON bem amigável, por favor indique nos comentários.</p>
 
 <p>texto tirado do site: <a href="http://scienceblogs.com.br/100nexos/2011/10/um-guia-rpido-para-o-novo-google-reader/">scienceblogs.com.br</a></p>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=121500724572753";
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-comments" data-href="readertogplusfriends.appspot.com" data-num-posts="50" data-width="500"></div>
 <br />
 
+<a href="https://twitter.com/avelino0" class="twitter-follow-button" data-show-count="false">Follow @avelino0</a>
+<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
 <p><a href="http://avelino.us">Thiago Avelino</a> app in <a href="http://python.org">python</a></p>
 <p><a href="http://github.com/avelino/readertogplusfriends/">Source in Github</a></p>
 
