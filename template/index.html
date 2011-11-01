@@ -1,0 +1,37 @@
+<html>
+<title>Google Reader to Google+ Friends</title>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3063031-21']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<h1>Google Reader to Google+ Friends</h1>
+
+<form action="/send" method="post" enctype="multipart/form-Data">
+  Arquivo json: <input type="file" name="arquivo" id="arquivo">
+  <input type="submit" value="Enviar" name="send">
+</form>
+
+<p><strong>Mas onde estão os meus amigos do Reader no Google+?</strong> Para descobrir todos a quem você seguia e quem lhe seguiam, será preciso acessar as configurações do Reader. Dentro do Reader, no canto superior direito há uma engrenagem, acesse “<em>Reader Settings</em>”, e então a tab “<em>Import/Export</em>”.</p>
+<p>Lá você encontrará tanto a “<em>List of people that you follow</em>” quanto a “<em>List of people that follow you</em>” para fazer o download no formato JSON. O nome e endereço dos perfis deles estão lá, no JSON exportado.</p>
+<p><strong>E onde eu enfio esse JSON? </strong>Todos gostaríamos de enfiar em algum lugar do Google neste momento. O formato JSON foi feito para ser mais amigável e compreensível, mas se você abrir mesmo a pequena lista de amigos que acabou de baixar nesse formato em um editor de texto, pode não entender nada.</p>
+<p>A primeira ferramenta que você pode usar é um parser online como: <a href="http://json.parser.online.fr/">http://json.parser.online.fr/</a></p>
+<p>Abra o arquivo JSON no bloco de notas, copie e cole o conteúdo na caixa ao lado esquerdo do parser online. À direita deve ser exibido algo um pouco mais inteligível, você reconhecerá nomes, links e afins. Pode mesmo reconhecer a string de números em “<em>profileIds</em>” que identifica cada endereço de perfil do Google+ (basta adicionar esta string ao endereço <em>https://plus.google.com</em> para acessar o perfil correspondente).</p><p>Mas isso é complicado, e ficamos no aguardo de alguém criar uma ferramenta que permita importar todos os amigos em círculos no G+. Ou se alguém conhecer um leitor/parser JSON bem amigável, por favor indique nos comentários.</p>
+
+<p>texto tirado do site: <a href="http://scienceblogs.com.br/100nexos/2011/10/um-guia-rpido-para-o-novo-google-reader/">scienceblogs.com.br</a></p>
+<br />
+
+<p><a href="http://avelino.us">Thiago Avelino</a> app in <a href="http://python.org">python</a></p>
+<p><a href="http://github.com/avelino/readertogplusfriends/">Source in Github</a></p>
+
+</html>
