@@ -26,7 +26,7 @@
 		font-size:18px;
 		line-height:18px;
 		color:#717171;
-		padding:50px 0 20px 0;
+		padding-bottom:20px;
 		background:#fdfdfd;
 	}
 	
@@ -41,13 +41,13 @@
 	
 
 	#header{
-		padding-bottom:20px;
+		padding:50px 0 20px 0;
 		background:#fff;
 		border-bottom:1px solid #f0f0f0;
 	}
 
 		#header h1{
-			background:url(/images/images.jpg) no-repeat 0px 0px;
+			background:url(images/images.jpg) no-repeat 0px 0px;
 			width:295px;
 			height:55px;
 			margin: 0 auto
@@ -56,12 +56,15 @@
 			display:none
 		}
 	
-	#content-wrapper{
+	.socialize{
+	    margin:-55px 0 0 100px;
+	 }
+	
+	#content-wrapper, #fb-root{
 		padding-top:20px;
 		width:896px;
 		margin: 0 auto;
 	}
-	
 		#content-wrapper:after,.file:after, .submit:after, .download:after{
 			content:'.';
 			visibility:hidden;
@@ -158,12 +161,10 @@
 		float:left;
 		margin-right:20px;	
 	}
-	.download{
-		margin-top:50px;
+	.download, .file, .submit{
+		margin-top:70px;
 	}
-	.file{
-		margin:50px 0;
-	}
+
 		.download:before{
 			background-position:0px -58px;
 			width:82px;
@@ -192,7 +193,7 @@
 		font-size:14px
 	}
 	
-		#help h2{
+		#help h2, #fb-root h3{
 			color:#d94a38;
 			font-size:18px;
 			margin-bottom:20px;	
@@ -235,6 +236,19 @@
 		text-align:right;
 	}
 	
+	#fb-root{
+	    padding: 0px;
+	    margin: 20px auto;
+	}
+	    #fb-root h3{
+	        margin-bottom:10px
+	     }
+	    #fb-root p.fb{
+	        margin-bottom:30px;
+	        font-size:14px;
+	        color:#717171;
+	    }
+
 	#footer{
 		font-size:12px;
 		text-align:center;
@@ -247,11 +261,10 @@
 <body>
         <div id="header">
             <h1> <span>Google Reader to Google+ Friends</span></h1>
-            <!-- Inclua esta tag na seção head ou logo antes da tag de fechamento da seção body -
-<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-<!-- Inclua esta tag onde desejar que o botão +1 seja exibido 
-<g:plusone size="tall"></g:plusone>
-<a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="avelino0">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>-->
+               <div class="socialize">
+                    <g:plusone size="tall"></g:plusone>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="avelino0">Tweet</a>
+               </div>
         </div>
         <div id="content-wrapper">
             <div id="app">
@@ -272,26 +285,7 @@
                        <p>Agora é só <span>enviar</span></p>
                        <input type="submit" value="Enviar" name="send">
                     </div>
-                </form>
-                <br />
-                <br />
-                <!-- Inclua esta tag na seção head ou logo antes da tag de fechamento da seção body -->
-                <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-                <!-- Inclua esta tag onde desejar que o botão +1 seja exibido -->
-                <g:plusone size="tall"></g:plusone>
-                <a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="avelino0">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
-
-                <br />
-                <div id="fb-root"></div>
-                <script>(function(d, s, id) {
-                  var js, fjs = d.getElementsByTagName(s)[0];
-                  if (d.getElementById(id)) {return;}
-                    js = d.createElement(s); js.id = id;
-                    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=121500724572753";
-                    fjs.parentNode.insertBefore(js, fjs);
-                  }(document, 'script', 'facebook-jssdk'));</script>
-                <div class="fb-comments" data-href="readertogplusfriends.appspot.com" data-num-posts="50" data-width="400"></div>
-                
+                </form>                
             </div>
             <div id="help">
                 <ul>
@@ -310,10 +304,25 @@
                
                <p class="source">Texto tirado do site: <a href="http://scienceblogs.com.br/100nexos/2011/10/um-guia-rpido-para-o-novo-google-reader/">scienceblogs.com.br</a></p>
             </div>
-            
         </div>
+        <div id="fb-root">
+        <h3>FeedBack</h3>
+        <p class="fb">Deixe-nos saber a sua opinião</p>
+        <div class="fb-comments" data-href="readertogplusfriends.appspot.com" data-num-posts="50" data-width="896"></div></div>
         <div id="footer">
             <p><a href="http://avelino.us">Thiago Avelino</a> app in <a href="http://python.org">python</a> - layout by <a href="http://www.ramonalmeida.com">Ramon Almeida</a> - <a href="http://github.com/avelino/readertogplusfriends/">Source in Github</a></p>
-            </div>
+       </div>
+            
+    <!-- Inclua esta tag na seção head ou logo antes da tag de fechamento da seção body -->
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <!-- Inclua esta tag onde desejar que o botão +1 seja exibido -->
+    <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>     
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=121500724572753";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 </body>
 </html>
